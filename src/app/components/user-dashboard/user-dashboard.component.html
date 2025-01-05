@@ -1,0 +1,103 @@
+<!-- section start -->
+<section class="section-b-space">
+    <div class="container">
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="col-lg-3 col-md-4 mb-4">
+          <app-dashboard-sidebar></app-dashboard-sidebar>
+        </div>
+  
+        <!-- Main Dashboard -->
+        <div class="col-lg-9 col-md-8">
+          <section class="dashboard-right">
+            <div class="dashboard p-3 border rounded">
+              <!-- Page Title -->
+              <div class="page-title mb-3">
+                <h2 class="fw-bold text-dark">{{ 'My Dashboard' }}</h2>
+              </div>
+  
+              <!-- Welcome Message -->
+              <div class="welcome-msg mb-4">
+                <p class="text-secondary">
+                  {{ 'Hello,' }} <span class="fw-bold text-dark">{{ username }}!</span>
+                </p>
+              </div>
+  
+              <!-- Account Information -->
+              <div class="box-account box-info">
+                <div class="box-head mb-3">
+                  <h4 class="fw-bold">{{ 'Account Information' }}</h4>
+                </div>
+  
+                <div class="row">
+                  <!-- Contact Information -->
+                  <div class="col-md-6 mb-3">
+                    <div class="box border rounded p-3 shadow-sm">
+                      <div class="box-title d-flex justify-content-between align-items-center">
+                        <h5 class="fw-bold mb-0">{{ 'Contact Information' }}</h5>
+                        <a
+                          href="javascript:void(0)"
+                          [routerLink]="['/dashboard/useraccount']"
+                          class="text-danger"
+                          >{{ 'Edit' }}</a
+                        >
+                      </div>
+                      <div class="box-content mt-2">
+                        <h6 class="fw-bold text-dark">
+                          {{ userDetails.firstName }} {{ userDetails.lastName }}
+                        </h6>
+                        <p class="text-muted mb-1">{{ userDetails.email }}</p>
+                        <p class="text-muted">{{ userDetails.phoneNumber }}</p>
+                        <hr />
+                        <!-- <a
+                          href="javascript:void(0)"
+                          [routerLink]="['/dashboard/changepassword']"
+                          class="text-danger fw-bold"
+                          >{{ 'Change Password' }}</a
+                        > -->
+                      </div>
+                    </div>
+                  </div>
+  
+                  <!-- Newsletters -->
+                  <div class="col-md-6 mb-3">
+                    <!-- <div class="box border rounded p-3 shadow-sm">
+                      <div class="box-title d-flex justify-content-between align-items-center">
+                        <h5 class="fw-bold mb-0">{{ 'Newsletters' }}</h5>
+                        <a
+                          href="javascript:void(0)"
+                          class="text-danger fw-bold"
+                          (click)="subscribe()"
+                          *ngIf="!isNewLetterSubscribe"
+                          >{{ 'Subscribe' }}</a
+                        >
+                        <a
+                          href="javascript:void(0)"
+                          class="text-danger fw-bold"
+                          (click)="unsubscribe()"
+                          *ngIf="isNewLetterSubscribe"
+                          >{{ 'Unsubscribe' }}</a
+                        >
+                      </div>
+                      <div class="box-content mt-2">
+                        <p class="text-muted" *ngIf="!isNewLetterSubscribe">
+                          {{ 'You are currently not subscribed to any newsletter.' }}
+                        </p>
+                        <p class="text-success" *ngIf="isNewLetterSubscribe">
+                          {{ 'You are currently subscribing newsletter.' }}
+                        </p>
+                      </div>
+                    </div> -->
+                    <p>Newsletter Functionality is in Upcoming Changes</p>
+                </div>
+                </div>
+              </div>
+              <!-- End Account Information -->
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- section end -->
+  

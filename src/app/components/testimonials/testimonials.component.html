@@ -1,0 +1,49 @@
+<section class="testimonials-two-section fix mt-5">
+    <div class="container-fluid g-0">
+       <div class="row g-0">
+          <div class="col-xxl-4 col-xl-4 col-lg-12">
+             <div class="testimonials-video-area p-relative">
+                <figure class="image w-img">
+                   <img [src]="bannerImage ? bannerImage : 'assets/img/resources/video-1.jpg'" alt="">
+                </figure>
+                <div class="play-btn">
+                   <div class="video_player_btn">
+                      <a href="https://www.youtube.com/watch?v=eEzD-Y97ges" class="popup-video"><i class="icon-play"></i></a>
+                  </div>
+                </div>
+             </div>
+          </div>
+          <div class="col-xxl-8 col-xl-8 col-lg-12">
+             <div class="testimonials-two-area section-space-medium bg-color-1 p-relative">
+                <div class="shape-1" data-background="assets/imgs/shapes/shape-36.png"></div>
+                <div class="title-box wow fadeInLeft mb-60" data-wow-delay=".5s">
+                   <!-- <span class="section-sub-title">Testimonials</span> -->
+                   <h3 class="section-title mt-10 mb-0">{{title}}</h3>
+                </div>
+                <div class="swiper testimonial-active-2">
+                   <!-- <div class="swiper-wrapper"> -->
+                    <owl-carousel-o [options]="{  items: 1, loop: true, autoplay: true, autoplayTimeout: 3000, autoplayHoverPause: true }">
+                        <ng-container *ngFor="let testimonial of sectionOne!.pageSectionDetailsList">
+                          <ng-template carouselSlide>
+                            <div class="testimonial">
+                              <img src="{{imageUrl}}{{testimonial!.imageUrl}}" alt="testimonial" />
+                              <div class="testimonial-content">
+                                <p class="testimonialDesc" [innerHTML]="testimonial!.shortDescription"></p>
+                                <h4>{{ testimonial!.title }}</h4>
+                                <h4>{{ testimonial!.subTitle }}</h4>
+                              </div>
+                            </div>
+                          </ng-template>
+                        </ng-container>
+                      </owl-carousel-o>
+                   <!-- </div> -->
+                </div>
+                <!-- If we need pagination -->
+                <div class="testimonial-dot-inner text-center mt-60">
+                   <div class="testimonial-swiper-dot"></div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+  </section>

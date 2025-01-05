@@ -1,0 +1,29 @@
+<!-- section start-->
+<section class="faq-section">
+    <h3 class="text-center mt-5">{{ 'Frequently Asked Questions' }}</h3>
+    <div class="container mt-5 mb-5">
+      <div class="row">
+        <div class="col-sm-12">
+          <div ngbAccordion>
+            <ng-container *ngFor="let item of faqs; let i = index">
+              <div ngbAccordionItem [collapsed]="i !== activeIndex">
+                <div ngbAccordionHeader>
+                  <button ngbAccordionButton (click)="setActiveIndex(i)">
+                    {{ item.title }}
+                  </button>
+                </div>
+                <div ngbAccordionCollapse>
+                  <div ngbAccordionBody>
+                    <p class="mb-0 faqhtml"  [innerHTML]="item.longDescription"></p>
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!--Section ends-->
+  

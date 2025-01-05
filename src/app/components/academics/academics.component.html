@@ -1,0 +1,300 @@
+<!-- Start Section Banner Area -->
+<!-- <div class="section-banner bg-10">
+  <div class="container">
+    <div class="banner-spacing">
+      <div class="section-info">
+        <h2 data-aos="fade-up" data-aos-delay="100">
+          {{ academicType | titlecase }}
+        </h2>
+        <p data-aos="fade-up" data-aos-delay="200" *ngIf="academicType == 'graduate'">
+          Graduate programs are designed for individuals who have completed an
+          undergraduate degree and are looking to specialize in a particular
+          field. These programs offer a deep dive into various disciplines...
+        </p>
+        <p data-aos="fade-up" data-aos-delay="200" *ngIf="academicType == 'graduate'">
+          Undergraduate programs are designed for individuals who have already
+          completed a Bachelor's or Master's degree and are looking to further
+          their expertise in a specialized field. These programs typically...
+        </p>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- End Section Banner Area -->
+
+<!-- Start Academics Section Area -->
+<div class="academics-section ptb-100">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="academics-left">
+          <div class="ac-category">
+            <ul>
+              <!-- <li><a href="academics.html">Overview</a></li> -->
+              <li>
+                <a [ngClass]="{'active': academicType == 'undergraduate'}" routerLink="/academics/undergraduate" active>Undergraduate</a>
+              </li>
+              <li><a [ngClass]="{'active': academicType == 'graduate'}" routerLink="/academics/graduate">Graduate</a></li>
+              <!-- <li><a href="online-education.html">Online Education</a></li> -->
+              <!-- <li><a href="faculty.html">Faculty</a></li> -->
+            </ul>
+          </div>
+          <div class="ac-contact">
+            <span>Quick Links</span>
+            <a href="/contact">Contact Us</a>
+            <!-- <a class="darkbtn" href="javascript:void(0)">Transfer</a> -->
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="ac-overview">
+          <div class="pera-title">
+            <h2>
+             {{sectionOne!.title}}
+            </h2>
+          </div>
+          <div class="pera-dec">
+            <div>
+              <p [innerHTML]="sectionOne!.shortDescription"></p>
+            </div>
+
+            <!-- <div *ngIf="academicType == 'undergraduate'">
+              <p>
+                Undergraduate programs are designed for individuals who have
+                already completed a Bachelor's or Master's degree and are
+                looking to further their expertise in a specialized field. These
+                programs typically involve advanced research and academic study,
+                preparing students for high-level careers in academia, research,
+                or specialized professional roles. Undergraduate programs may
+                include Ph.D. programs, professional doctorates, or other
+                advanced study options.
+              </p>
+
+              <p><strong>Key Features of Undergraduate Programs:</strong></p>
+
+              <ul>
+                <li>
+                  <p>
+                    <strong>Research-Oriented:</strong> Undergraduate programs
+                    are often centered around original research, offering
+                    students the opportunity to contribute new knowledge in
+                    their field.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Doctorate Opportunities:</strong> These programs
+                    include Ph.D. and professional doctorates in specialized
+                    areas, preparing students for careers in research, higher
+                    education, or advanced professional practice.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Academic Rigor:</strong> Students are expected to
+                    engage in deep academic analysis, critical thinking, and
+                    scholarly research, often requiring a thesis, dissertation,
+                    or other extensive projects.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Global Recognition:</strong> Undergraduate
+                    qualifications are widely recognized internationally,
+                    enhancing career prospects in both academic and professional
+                    settings around the world.
+                  </p>
+                </li>
+              </ul>
+            </div> -->
+
+            <!-- <div class="problem-sector">
+              <div class="problem-list">
+                <div class="title">
+                  <h3>Business & Administration</h3>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6 col-sm-6 col-md-6">
+                    <div class="problem-items">
+                      <ul>
+                        <li><a href="javascript:void(0)">Business Media</a></li>
+                        <li>
+                          <a href="javascript:void(0)">Corporate Finance</a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0)"
+                            >Business Administration</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-sm-6 col-md-6">
+                    <div class="problem-items">
+                      <ul>
+                        <li>
+                          <a href="javascript:void(0)">Business Ethics</a>
+                        </li>
+                        <li><a href="javascript:void(0)">Marketing</a></li>
+                        <li>
+                          <a href="javascript:void(0)"
+                            >Accounting And Finance</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="problem-list">
+                <div class="title">
+                  <h3>Management</h3>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6 col-sm-6 col-md-6">
+                    <div class="problem-items">
+                      <ul>
+                        <li>
+                          <a href="javascript:void(0)">Financial Analysis</a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0)">Information System</a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0)"
+                            >Entrepreneurship And Innovation</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-sm-6 col-md-6">
+                    <div class="problem-items">
+                      <ul>
+                        <li>
+                          <a href="javascript:void(0)"
+                            >Nonprofit Administration</a
+                          >
+                        </li>
+                        <li>
+                          <a href="javascript:void(0)">Public Administration</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="problem-list">
+                <div class="title">
+                  <h3>Economics</h3>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6 col-sm-6 col-md-6">
+                    <div class="problem-items">
+                      <ul>
+                        <li>
+                          <a href="javascript:void(0)">Major In Economics</a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0)"
+                            >Financial Economics Concentration</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-sm-6 col-md-6">
+                    <div class="problem-items">
+                      <ul>
+                        <li>
+                          <a href="javascript:void(0)"
+                            >Development Concentration</a
+                          >
+                        </li>
+                        <li>
+                          <a href="javascript:void(0)"
+                            >International Economics</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="problem-list">
+                <div class="title">
+                  <h3>Sciences</h3>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6 col-sm-6 col-md-6">
+                    <div class="problem-items">
+                      <ul>
+                        <li><a href="javascript:void(0)">Biotechnology</a></li>
+                        <li><a href="javascript:void(0)">Chemistry</a></li>
+                        <li>
+                          <a href="javascript:void(0)">Computer Science</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-sm-6 col-md-6">
+                    <div class="problem-items">
+                      <ul>
+                        <li><a href="javascript:void(0)">Data Science</a></li>
+                        <li>
+                          <a href="javascript:void(0)"
+                            >Energy System Management</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="problem-list">
+                <div class="title">
+                  <h3>Art & Design</h3>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6 col-sm-6 col-md-6">
+                    <div class="problem-items">
+                      <ul>
+                        <li><a href="javascript:void(0)">Architecture</a></li>
+                        <li><a href="javascript:void(0)">Fashion Design</a></li>
+                        <li><a href="javascript:void(0)">Arts In Design</a></li>
+                        <li>
+                          <a href="javascript:void(0)">Interior Design</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-sm-6 col-md-6">
+                    <div class="problem-items">
+                      <ul>
+                        <li><a href="javascript:void(0)">Product Design</a></li>
+                        <li>
+                          <a href="javascript:void(0)"
+                            >Arts In Landscape Design</a
+                          >
+                        </li>
+                        <li>
+                          <a href="javascript:void(0)">Design Management</a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0)"
+                            >Media And Communication Design</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Academics Section Area -->

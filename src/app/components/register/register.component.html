@@ -1,0 +1,358 @@
+<div class="limiter">
+  <div class="container-login100">
+    <div class="wrap-login100">
+      <div class="login100-pic js-tilt" data-tilt>
+        <img src="/assets/img/bhoomi/bhoomilogin.jpeg" alt="IMG" />
+      </div>
+
+      <form
+        [formGroup]="registerForm"
+        (ngSubmit)="onSubmit()"
+        class="login100-form validate-form"
+      >
+        <span class="login100-form-title"> Sign Up </span>
+
+        <!-- First Name Field -->
+        <div
+          class="wrap-input100 validate-input"
+          [class]="{
+            'has-error':
+              registerForm.get('fName')?.invalid &&
+              registerForm.get('fName')?.touched
+          }"
+        >
+          <input
+            class="input100"
+            type="text"
+            formControlName="fName"
+            placeholder="First Name"
+          />
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+            <i class="fa fa-user" aria-hidden="true"></i>
+          </span>
+          <div
+            *ngIf="
+              registerForm.get('fName')?.invalid &&
+              registerForm.get('fName')?.touched
+            "
+            class="error-message"
+          >
+            <div *ngIf="registerForm.get('fName')?.hasError('required')">
+              First name is required.
+            </div>
+            <div *ngIf="registerForm.get('fName')?.hasError('minlength')">
+              First name must be at least 2 characters long.
+            </div>
+          </div>
+        </div>
+
+        <!-- Last Name Field -->
+        <div
+          class="wrap-input100 validate-input"
+          [class]="{
+            'has-error':
+              registerForm.get('lName')?.invalid &&
+              registerForm.get('lName')?.touched
+          }"
+        >
+          <input
+            class="input100"
+            type="text"
+            formControlName="lName"
+            placeholder="Last Name"
+          />
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+            <i class="fa fa-user" aria-hidden="true"></i>
+          </span>
+          <div
+            *ngIf="
+              registerForm.get('lName')?.invalid &&
+              registerForm.get('lName')?.touched
+            "
+            class="error-message"
+          >
+            <div *ngIf="registerForm.get('lName')?.hasError('required')">
+              Last name is required.
+            </div>
+            <div *ngIf="registerForm.get('lName')?.hasError('minlength')">
+              Last name must be at least 2 characters long.
+            </div>
+          </div>
+        </div>
+
+        <!-- Email Field -->
+        <div
+          class="wrap-input100 validate-input"
+          [class]="{
+            'has-error':
+              registerForm.get('email')?.invalid &&
+              registerForm.get('email')?.touched
+          }"
+        >
+          <input
+            class="input100"
+            type="text"
+            formControlName="email"
+            placeholder="Email"
+          />
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+          </span>
+          <div
+            *ngIf="
+              registerForm.get('email')?.invalid &&
+              registerForm.get('email')?.touched
+            "
+            class="error-message"
+          >
+            <div *ngIf="registerForm.get('email')?.hasError('required')">
+              Email is required.
+            </div>
+            <div *ngIf="registerForm.get('email')?.hasError('email')">
+              Enter a valid email address.
+            </div>
+          </div>
+        </div>
+
+        <!-- Password Field -->
+        <div
+          class="wrap-input100 validate-input"
+          [class]="{
+            'has-error':
+              registerForm.get('password')?.invalid &&
+              registerForm.get('password')?.touched
+          }"
+        >
+          <input
+            class="input100"
+            type="password"
+            formControlName="password"
+            placeholder="Password"
+          />
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+          </span>
+          <div
+            *ngIf="
+              registerForm.get('password')?.invalid &&
+              registerForm.get('password')?.touched
+            "
+            class="error-message"
+          >
+            <div *ngIf="registerForm.get('password')?.hasError('required')">
+              Password is required.
+            </div>
+            <div *ngIf="registerForm.get('password')?.hasError('minlength')">
+              Password must be at least 6 characters long.
+            </div>
+          </div>
+        </div>
+
+        <!-- Confirm Password Field -->
+        <div
+          class="wrap-input100 validate-input"
+          [class]="{
+            'has-error':
+              registerForm.get('confirmPassword')?.invalid &&
+              registerForm.get('confirmPassword')?.touched
+          }"
+        >
+          <input
+            class="input100"
+            type="password"
+            formControlName="confirmPassword"
+            placeholder="Confirm Password"
+          />
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+          </span>
+          <div
+            *ngIf="
+              registerForm.get('confirmPassword')?.invalid &&
+              registerForm.get('confirmPassword')?.touched
+            "
+            class="error-message"
+          >
+            <div
+              *ngIf="registerForm.get('confirmPassword')?.hasError('required')"
+            >
+              Confirm password is required.
+            </div>
+            <div
+              *ngIf="
+                registerForm
+                  .get('confirmPassword')
+                  ?.hasError('passwordMismatch')
+              "
+            >
+              Passwords do not match.
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone Number Field -->
+        <div
+          class="wrap-input100 validate-input"
+          [class]="{
+            'has-error':
+              registerForm.get('phoneNumber')?.invalid &&
+              registerForm.get('phoneNumber')?.touched
+          }"
+        >
+          <input
+            class="input100"
+            type="tel"
+            formControlName="phoneNumber"
+            placeholder="Phone Number"
+          />
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+          </span>
+          <div
+            *ngIf="
+              registerForm.get('phoneNumber')?.invalid &&
+              registerForm.get('phoneNumber')?.touched
+            "
+            class="error-message"
+          >
+            <div *ngIf="registerForm.get('phoneNumber')?.hasError('required')">
+              Phone number is required.
+            </div>
+            <div *ngIf="registerForm.get('phoneNumber')?.hasError('pattern')">
+              Enter a valid phone number.
+            </div>
+          </div>
+        </div>
+
+        <!-- Gender Field -->
+        <div
+          class="wrap-input100 validate-input"
+          [class]="{
+            'has-error':
+              registerForm.get('gender')?.invalid &&
+              registerForm.get('gender')?.touched
+          }"
+        >
+          <select class="input100" formControlName="gender" required>
+            <option value="" disabled selected>Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+            <i class="fa fa-venus-mars" aria-hidden="true"></i>
+          </span>
+          <div
+            *ngIf="
+              registerForm.get('gender')?.invalid &&
+              registerForm.get('gender')?.touched
+            "
+            class="error-message"
+          >
+            <div *ngIf="registerForm.get('gender')?.hasError('required')">
+              Gender is required.
+            </div>
+          </div>
+        </div>
+
+        <!-- Age Field -->
+        <div
+          class="wrap-input100 validate-input"
+          [class]="{
+            'has-error':
+              registerForm.get('age')?.invalid &&
+              registerForm.get('age')?.touched
+          }"
+        >
+          <input
+            class="input100"
+            type="number"
+            formControlName="age"
+            placeholder="Age"
+            min="18"
+            max="120"
+          />
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+          </span>
+          <div
+            *ngIf="
+              registerForm.get('age')?.invalid &&
+              registerForm.get('age')?.touched
+            "
+            class="error-message"
+          >
+            <div *ngIf="registerForm.get('age')?.hasError('required')">
+              Age is required.
+            </div>
+            <div *ngIf="registerForm.get('age')?.hasError('min')">
+              Age must be at least 18.
+            </div>
+            <div *ngIf="registerForm.get('age')?.hasError('max')">
+              Age must be at most 120.
+            </div>
+          </div>
+        </div>
+
+        <!-- Address Field -->
+        <div
+          class="wrap-input100 validate-input"
+          [class]="{
+            'has-error':
+              registerForm.get('address')?.invalid &&
+              registerForm.get('address')?.touched
+          }"
+        >
+          <textarea
+            class="input100"
+            formControlName="address"
+            placeholder="Address"
+            rows="4"
+          ></textarea>
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+          </span>
+          <div
+            *ngIf="
+              registerForm.get('address')?.invalid &&
+              registerForm.get('address')?.touched
+            "
+            class="error-message"
+          >
+            <div *ngIf="registerForm.get('address')?.hasError('required')">
+              Address is required.
+            </div>
+            <div *ngIf="registerForm.get('address')?.hasError('minlength')">
+              Address must be at least 10 characters long.
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="container-login100-form-btn">
+          <button
+            type="submit"
+            [disabled]="registerForm.invalid"
+            class="login100-form-btn"
+          >
+            Register
+          </button>
+        </div>
+
+        <div class="text-center p-t-136">
+          <a class="txt2" href="/signin">
+            Already have an Account? LogIn Here
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

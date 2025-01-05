@@ -1,0 +1,15 @@
+<div class="chat-container">
+    <div class="messages">
+      <div *ngFor="let msg of messages">
+        <div class="user-message">तपाईं: {{ msg.user }}</div>
+        <div class="bot-message">बोट: {{ msg.bot }}</div>
+      </div>
+    </div>
+    <div class="input-container d-flex justify-content-around">
+      <input
+        [(ngModel)]="userMessage"
+        placeholder="यहाँ आफ्नो सन्देश टाइप गर्नुहोस्..."
+      />
+      <button class="btn btn-success" (click)="sendMessage()">पठाउनुहोस्</button>
+    </div>
+  </div>

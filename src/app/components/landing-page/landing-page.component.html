@@ -1,0 +1,156 @@
+<!-- <div class="hero-slider" *ngFor="let slider of slidersNew">
+  <div
+    class="main-banner"
+    [ngClass]="textClass"
+    [ngStyle]="{
+      'background-image': 'url(' + imageUrl + slider.imageUrl + ')'
+    }">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="slider-contain">
+            <h1>{{ slider.name }}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+<!-- Start Clgun Banner 2 Area -->
+<div class="banner-area-2 big-bg-2">
+  <div class="container">
+    <div class="banner-content-2">
+      <div class="content">
+        <span data-aos="fade-zoom-in" data-aos-delay="300"
+          >
+          {{slidersData!.slider}}</span>
+        <h1 data-aos="fade-up" data-aos-delay="200">
+          {{slidersData!.name}}
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="300">
+          {{slidersData!.description}}
+        </p>
+
+        <div class="" data-aos="fade-up" data-aos-delay="100">
+          <a class="default-btn btn-style-3" (click)="openChat()">Chat with Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Clgun Banner 2 Area -->
+ 
+
+<!-- Start About Us Area -->
+<div class="about-us-area ptb-100">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-5 col-md-12">
+        <div class="text-content" data-aos="fade-up" data-aos-delay="100">
+          <div class="sub-title">
+            <i class="bx bxs-graduation"></i>
+            <p>{{sectionOne!.pageSectionDetailsList[0]!.subTitle}}</p>
+          </div>
+          <h2 class="title-anim">{{sectionOne!.pageSectionDetailsList[0]!.title}}</h2>
+          <p class="title-anim" [innerHTML]="sectionOne!.pageSectionDetailsList[0]!.shortDescription">
+          </p>
+          <!-- <a class="default-btn" href="schedule-tour.html"
+            >Schedule a Free Consultation</a
+          > -->
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="row justify-content-end">
+          <div class="col-lg-6 col-sm-6 col-md-6">
+            <div class="content" data-aos="fade-right" data-aos-delay="100">
+              <img [src]="sectionOne!.pageSectionDetailsList[1]!.imageUrl != '' ? imageUrl + sectionOne!.pageSectionDetailsList[1]!.imageUrl : 'assets/img/bhoomi/bhoomiglobal.png'" alt="image" />
+              <!-- <img [src]="{{imgUrl}}{{sectionOne?.pageSectionDetailsList[1]?.imageUrl}}" alt="image" /> -->
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-6 col-md-6">
+            <div
+              class="notice-content"
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
+              <i class="bx bxs-quote-left"></i>
+              <!-- <h4 class="title-anim">Knowledge Beyond Boundaries</h4> -->
+              <h4 class="title-anim">{{sectionOne!.pageSectionDetailsList[1]!.title}}</h4>
+              <p class="title-anim" [innerHTML]="sectionOne!.pageSectionDetailsList[1]!.shortDescription">
+              </p>
+              <!-- <div class="author-info">
+                <span>Rajan Kumar Chaudhary</span>
+                <p>Founder, Bhoomi Global Education Consultancy</p>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End About Us Area -->
+
+<!-- Start Events Area -->
+<app-eventscomp></app-eventscomp>
+<!-- End Events Area -->
+
+<div class="container mt-5">
+  <div class="section-title" data-aos="fade-up" data-aos-delay="100">
+    <div class="sub-title">
+      <p>{{sectionTwo!.subTitle}}</p>
+    </div>
+    <h2>{{sectionTwo!.title}}</h2>
+  </div>
+</div>
+
+<!-- Start Testimonials Area -->
+<app-testimonials></app-testimonials>
+<!-- End Testimonials Area -->
+
+<!-- Start Success Award Area -->
+<div class="success-award-area ptb-100">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="content" data-aos="fade-up" data-aos-delay="100">
+          <h2>{{sectionThree!.pageSectionDetailsList[0]!.title}}</h2>
+          <p [innerHTML]="sectionThree!.pageSectionDetailsList[0]!.shortDescription">
+          </p>
+         
+          <div class="notice">
+            <i class="bx bx-check-shield"></i>
+            <p>
+              {{sectionThree!.pageSectionDetailsList[0]!.subTitle}}
+            </p>
+          </div>
+          <div class="arrow">
+            <!-- <img src="assets/img/icon/shape-1.png" alt="image" /> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="image imf-fluid" data-aos="fade-zoom-in" data-aos-delay="100">
+          <img [src]="sectionThree!.pageSectionDetailsList[0]!.imageUrl != '' ? imageUrl + sectionThree!.pageSectionDetailsList[0]!.imageUrl: 'assets/img/all-img/shapingglobal.jpg'" alt="image" />
+          <div class="play">
+            <div class="button">
+              <!-- <a href="#"><i class="bx bx-play"></i></a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Success Award Area -->
+
+
+<!-- Start Subscribe Area 3 -->
+<app-newsletter></app-newsletter>
+
+<!-- End Subscribe Area 3 -->

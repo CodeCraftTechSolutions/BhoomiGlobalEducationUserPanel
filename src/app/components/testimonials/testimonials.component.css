@@ -1,0 +1,104 @@
+.testimonial {
+    flex-direction: column;
+    text-align: center;
+  }
+.testimonial {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.testimonial img {
+  border-radius: 50%;
+  margin-right: 30px;
+  width: 100px; /* Default image size */
+  height: 100px; /* Default image size */
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+
+.testimonial-content {
+  max-width: calc(100% - 120px); /* Adjust width to make room for a larger image */
+}
+
+.testimonial-content p {
+  font-size: 1.4rem; /* Increased font size */
+  color: #555;
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.testimonial-content h4 {
+  font-size: 1rem; /* Larger font size */
+  color: #333;
+  margin-top: 10px;
+  font-weight: 600; /* Slightly bolder */
+  text-transform: uppercase;
+  letter-spacing: 1px; /* Adds a bit of space between letters */
+}
+
+/* Hover effect for the testimonial */
+.testimonial:hover {
+  transform: translateY(-10px); /* Lift the testimonial */
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .testimonial {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .testimonial img {
+    width: 80px; /* Smaller image size for mobile */
+    height: 80px; /* Smaller image size for mobile */
+    margin-bottom: 20px; /* Space between image and content */
+    margin: auto;
+  }
+
+  .testimonial-content {
+    max-width: 100%; /* Full width for mobile */
+    padding: 0 15px;
+  }
+
+  .testimonial-content p {
+    font-size: 1.3rem; /* Slightly larger font size for mobile */
+    /* font-style: italic; To emphasize the testimonial text */
+    margin-top: 1rem;
+    line-height: 1.2rem;
+  }
+
+  .testimonial-content h4 {
+    font-size: 1rem; /* Slightly larger font size for mobile */
+    font-weight: bold; /* Bolder font for emphasis */
+  }
+}
+
+@media (max-width: 480px) {
+    .testimonial {
+        flex-direction: flex !important;
+        text-align: center;
+      }
+  .testimonial img {
+    text-align: center;
+    width: 70px; /* Smaller image size for very small screens */
+    height: 70px;
+    margin: auto;
+  }
+
+  .testimonial-content p {
+    font-size: 1rem; /* Increased font size for readability */
+    line-height: 1.2rem;
+  }
+
+  .testimonial-content h4 {
+    font-size: 0.6rem; /* Slightly larger font for very small screens */
+  }
+}

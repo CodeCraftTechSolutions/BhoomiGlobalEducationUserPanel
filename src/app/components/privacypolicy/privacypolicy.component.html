@@ -1,0 +1,66 @@
+<div class="privacy-policy-container" *ngIf="sectionOne">
+    <div class="container" id="services">
+      <header class="page-header" style="text-align: center; background-color: #e3f2fd; padding: 40px 0;">
+        <h1 style="font-size: 3.5rem; color: #01579b;">{{ sectionOne!.title }}</h1>
+        <p style="font-size: 1.2rem; color: #4a6572; margin-top: 10px;">{{ sectionOne!.subTitle }}</p>
+      </header>
+  
+      <section class="intro-section" style="padding: 50px 0; background-color: #ffffff; border-bottom: 2px solid #ccc;">
+        <h2 style="font-size: 2.5rem; color: #00796b;">{{ sectionTwo!.title }}</h2>
+        <p style="font-size: 1.2rem; color: #5c6b6d;">{{ sectionTwo!.subTitle }}</p>
+      </section>
+  
+      <section class="policy-details" style="padding: 50px 0;">
+        <h2 style="font-size: 2.5rem; color: #00796b;">{{ sectionThree!.pageSectionDetailsList[0]!.title }}</h2>
+        <div class="row mt-5">
+          <div class="col-md-6">
+            <h3 style="font-size: 2rem; color: #2a4d73;">{{ sectionThree!.pageSectionDetailsList[1]!.title }}</h3>
+            <p style="font-size: 1.2rem; color: #5c6b6d;">{{ sectionThree!.pageSectionDetailsList[1]!.subTitle }}</p>
+          </div>
+          <div class="col-md-6">
+            <h3 style="font-size: 2rem; color: #2a4d73;">{{ sectionThree!.pageSectionDetailsList[2]!.title }}</h3>
+            <p style="font-size: 1.2rem; color: #5c6b6d;">{{ sectionThree!.pageSectionDetailsList[2]!.subTitle }}</p>
+          </div>
+        </div>
+      </section>
+  
+      <section class="usage-details" style="padding: 50px 0;">
+        <h2 style="font-size: 2.5rem; color: #00796b;">{{ sectionFour!.title }}</h2>
+        <p style="font-size: 1.2rem; color: #5c6b6d;" class="ml-3">{{ sectionFour!.subTitle }}</p>
+        <p style="font-size: 1.2rem; color: #5c6b6d;" class="innerprivpolicy" [innerHTML]="sectionFour!.shortDescription"></p>
+        <!-- <ul style="font-size: 1.2rem; color: #5c6b6d;">
+          <li>To provide you with personalized counseling and support</li>
+          <li>To process applications, provide advice, and communicate with you</li>
+          <li>To improve our services and website functionality</li>
+          <li>To send periodic updates, newsletters, or promotional materials (only if you’ve opted in)</li>
+        </ul> -->
+      </section>
+  
+      <section class="third-party-sharing" style="padding: 50px 0; background-color: #f1f8e9;">
+        <h2 style="font-size: 2.5rem; color: #00796b;">{{ sectionFive!.title }}</h2>
+        <p style="font-size: 1.2rem; color: #5c6b6d;">{{ sectionFive!.subTitle }}</p>
+        <p style="font-size: 1.2rem; color: #5c6b6d;" class="innerprivpolicy"  [innerHTML]="sectionFive!.shortDescription"></p>
+      </section>
+  
+      <section class="security-measures" style="padding: 50px 0;">
+        <h2 style="font-size: 2.5rem; color: #00796b;">{{ sectionSix!.pageSectionDetailsList[0]!.title }}</h2>
+        <p style="font-size: 1.2rem; color: #5c6b6d;">{{ sectionSix!.pageSectionDetailsList[0]!.subTitle }}</p>
+      </section>
+  
+      <section class="cookies-policy" style="padding: 50px 0; background-color: #f1f8e9;">
+        <h2 style="font-size: 2.5rem; color: #00796b;">{{ sectionSix!.pageSectionDetailsList[1]!.title }}</h2>
+        <p style="font-size: 1.2rem; color: #5c6b6d;">{{ sectionSix!.pageSectionDetailsList[1]!.subTitle }}</p>
+      </section>
+  
+      <section class="user-rights" style="padding: 50px 0;">
+        <h2 style="font-size: 2.5rem; color: #00796b;">{{ sectionSix!.pageSectionDetailsList[2]!.title }}</h2>
+        <p style="font-size: 1.2rem; color: #5c6b6d;">{{ sectionSix!.pageSectionDetailsList[2]!.subTitle }}</p>
+      </section>
+  
+      <section class="contact-info" style="padding: 50px 0; background-color: #00796b; color: white; text-align: center;">
+        <h2 style="font-size: 2.5rem;">{{ sectionSeven!.title }}</h2>
+        <p style="font-size: 1.2rem;" class="text-white mb-2">{{ sectionSeven!.subTitle }}</p>
+        <a routerLink="/contact" style="background-color: #ffb300; cursor: pointer; padding: 15px 30px; color: #fff; font-size: 1.2rem; text-decoration: none; border-radius: 5px;">Contact Us</a>
+      </section>
+    </div>
+  </div>

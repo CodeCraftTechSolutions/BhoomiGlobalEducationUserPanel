@@ -1,0 +1,11 @@
+.banner-spacing {
+    padding: 115px 0;
+    margin-bottom: 40px;
+}
+
+
+ul > li > strong {
+    /* Styles for <strong> inside <li> of that specific <ul> */
+    color: red !important;
+    font-weight: bold;
+  }

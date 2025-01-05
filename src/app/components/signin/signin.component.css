@@ -1,0 +1,9 @@
+.has-error .input100 {
+    border-color: red;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 12px;
+  }
+  

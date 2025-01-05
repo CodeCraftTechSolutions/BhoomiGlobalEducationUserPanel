@@ -1,0 +1,73 @@
+// Montserrat-fonts
+
+@font-face {
+  font-family: "MontserratLight";
+  src: url("../../fonts/Montserrat/Montserrat-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "MontserratRegular";
+  src: url("../../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "MontserratMedium";
+  src: url("../../fonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "MontserratSemiBold";
+  src: url("../../fonts/Montserrat/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "MontserratBold";
+  src: url("../../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+//         Nunito fonts
+
+@font-face {
+  font-family: "NunitoLight";
+  src: url("../../fonts/Nunito/Nunito-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "NunitoRegular";
+  src: url("../../fonts/Nunito/Nunito-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "NunitoMedium";
+  src: url("../../fonts/Nunito/Nunito-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "NunitoSemiBold";
+  src: url("../../fonts/Nunito/Nunito-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "NunitoBold";
+  src: url("../../fonts/Nunito/Nunito-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+//         Avenir fonts
+
+@font-face {
+  font-family: "AvenirNext";
+  src: url("../../fonts/AvenirNext/AvenirNextLTPro-Regular.otf")
+    format("truetype");
+  // font-weight: 400;
+}
+
+@font-face {
+  font-family: "AvenirNextDemiBold";
+  src: url("../../fonts/AvenirNextDemi/avenir-next-demibold.ttf")
+    format("truetype");
+  // font-weight: 700;
+}

@@ -1,0 +1,115 @@
+    <!-- Start Events Area -->
+    <div class="events-area ptb-100">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up" data-aos-delay="100">
+                <div class="sub-title">
+                    <i class='bx bxs-graduation'></i> <p>{{fetauredPageList!.pageSectionInputList[0]!.pageSectionDetailsList[0]!.subTitle}}</p>
+                </div>
+                 <h2 class="title-anim">{{fetauredPageList!.pageSectionInputList[0]!.pageSectionDetailsList[0]!.title}}</h2>
+            </div>
+
+            <!-- Top Event -->
+            <div class="event lg" data-aos="fade-up" data-aos-delay="100">
+                <div class="content">
+                    <div class="image">
+                        <img [src]="fetauredPageList!.pageSectionInputList[1]!.pageSectionDetailsList[0]!.imageUrl != '' ? imageUrl + fetauredPageList!.pageSectionInputList[1]!.pageSectionDetailsList[0]!.imageUrl : 'assets/img/bhoomi/empoweringuk.png'" alt="icon">
+                    </div>
+                    <div class="text title-anim">
+                        <div class="tag">Featured News</div>
+                         <h2>{{fetauredPageList!.pageSectionInputList[1]!.pageSectionDetailsList[0]!.title}}</h2>
+                        <span>{{fetauredPageList!.pageSectionInputList[1]!.pageSectionDetailsList[0]!.subTitle}}</span>
+                        <p [innerHTML]="fetauredPageList!.pageSectionInputList[1]!.pageSectionDetailsList[0]!.shortDescription"></p>
+                        <!-- <div class="link"><a href="blog-details.html"><i class='bx bx-link-external'></i></a></div> -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recent Post & Event -->
+            <div class="row">
+                <div class="col-lg-8 col-12">
+                    <div class="recent-post">
+                        <div class="event" data-aos="fade-up" data-aos-delay="100">
+                            <div class="content">
+                                <div class="image">
+                                    <img [src]="fetauredPageList!.pageSectionInputList[2]!.pageSectionDetailsList[0]!.imageUrl != '' ? imageUrl + fetauredPageList!.pageSectionInputList[2]!.pageSectionDetailsList[0]!.imageUrl : 'assets/img/bhoomi/uk.png'" alt="icon">
+                                </div>
+                                <div class="text title-anim">
+                                    <div class="tag">News</div>
+                                     <h2>{{fetauredPageList!.pageSectionInputList[2]!.pageSectionDetailsList[0]!.title}}</h2>
+                                    <span>{{fetauredPageList!.pageSectionInputList[2]!.pageSectionDetailsList[0]!.subTitle}}</span>
+                                    <p [innerHTML]="fetauredPageList!.pageSectionInputList[2]!.pageSectionDetailsList[0]!.shortDescription"></p>
+                                    <!-- <div class="link"><a href="blog-details.html"><i class='bx bx-link-external'></i></a></div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="event" data-aos="fade-up" data-aos-delay="200">
+                            <div class="content">
+                                <div class="image">
+                                    <img [src]="fetauredPageList!.pageSectionInputList[3]!.pageSectionDetailsList[0]!.imageUrl != '' ? imageUrl + fetauredPageList!.pageSectionInputList[3]!.pageSectionDetailsList[0]!.imageUrl : 'assets/img/bhoomi/uk.png'" alt="icon">
+                                </div>
+                                <div class="text title-anim">
+                                    <div class="tag">News</div>
+                                     <h2>{{fetauredPageList!.pageSectionInputList[3]!.pageSectionDetailsList[0]!.title}}</h2>
+                                    <span>{{fetauredPageList!.pageSectionInputList[3]!.pageSectionDetailsList[0]!.subTitle}}</span>
+                                    <p [innerHTML]="fetauredPageList!.pageSectionInputList[3]!.pageSectionDetailsList[0]!.shortDescription"></p>
+                                    <!-- <div class="link"><a href="blog-details.html"><i class='bx bx-link-external'></i></a></div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <div class="upcoming-event">
+                        <!-- Upcoming Events -->
+                        <h4 data-aos="fade-up" data-aos-delay="100">Events / Stories</h4>  
+                        <div class="event-dates" data-aos="fade-up" data-aos-delay="100">
+                            <div class="date">
+                                <ul>
+                                    <li class="mnt">{{eventPageList!.pageSectionInputList[0]!.pageSectionDetailsList[0]!.subTitle}}</li>
+                                    <!-- <li class="det">13</li> -->
+                                </ul>
+                            </div>
+                            <div class="content title-anim">
+                                <h3>{{eventPageList!.pageSectionInputList[0]!.pageSectionDetailsList[0]!.title}}</h3>
+                                <p [innerHTML]="eventPageList!.pageSectionInputList[0]!.pageSectionDetailsList[0]!.shortDescription"></p>
+                                <!-- <div class="location"><i class='bx bx-map'></i> Canyon Grand Hall</div> -->
+                                <!-- <div class="link"><a href="blog-details.html"><i class='bx bx-link-external'></i></a></div> -->
+                            </div>
+                        </div>
+                        <div class="event-dates" data-aos="fade-up" data-aos-delay="200">
+                            <div class="date">
+                                <ul>
+                                    <li class="mnt">{{eventPageList!.pageSectionInputList[1]!.pageSectionDetailsList[0]!.subTitle}}</li>
+                                    <!-- <li class="det">17</li> -->
+                                </ul>
+                            </div>
+                            <div class="content title-anim">
+                                <h3>{{eventPageList!.pageSectionInputList[1]!.pageSectionDetailsList[0]!.title}}</h3>
+                                <p [innerHTML]="eventPageList!.pageSectionInputList[1]!.pageSectionDetailsList[0]!.shortDescription"></p>
+                                <!-- <div class="location"><i class='bx bx-map'></i> Canyon Grand Hall</div>
+                                <div class="link"><a href="blog-details.html"><i class='bx bx-link-external'></i></a></div> -->
+                            </div>
+                        </div>
+                        <div class="event-dates" data-aos="fade-up" data-aos-delay="300">
+                            <div class="date">
+                                <ul>
+                                    <li class="mnt">{{eventPageList!.pageSectionInputList[2]!.pageSectionDetailsList[0]!.subTitle}}</li>
+                                    <!-- <li class="det">19</li> -->
+                                </ul>
+                            </div>
+                            <div class="content title-anim">
+                                <h3>{{eventPageList!.pageSectionInputList[2]!.pageSectionDetailsList[0]!.title}}</h3>
+                                <p [innerHTML]="eventPageList!.pageSectionInputList[2]!.pageSectionDetailsList[0]!.shortDescription"></p>
+                                <!-- <div class="location"><i class='bx bx-map'></i> Canyon Grand Hall</div>
+                                <div class="link"><a href="blog-details.html"><i class='bx bx-link-external'></i></a></div> -->
+                            </div>
+                        </div>
+                        <!-- <div class="event-dates" data-aos="fade-zoom-in" data-aos-delay="100">
+                            <a class="btn" href="news-and-blog.html">View More Events <i class='bx bx-right-arrow-alt'></i></a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Events Area -->

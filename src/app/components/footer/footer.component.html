@@ -1,0 +1,189 @@
+        
+         <div class="footer-area-3">
+            <div class="container">
+                <div class="footer-top-info ptb-70" *ngIf="defaultDatas">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-sm-6 col-12">
+                            <div class="left-content">
+                                <p><i class='bx bx-support'></i> Speak to our expert at <a href="tel:{{defaultDatas!.phoneNumber}}">{{defaultDatas!.phoneNumber}}</a></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-12">
+                            <div class="right-content">
+                                <span>Follow Us</span>
+                                <ul>
+                                    <li><a [href]="defaultDatas!.facebookUrl" target="_blank"><i class='bx bxl-facebook'></i></a></li>
+                                    <li><a [href]="defaultDatas!.instagramUrl" target="_blank"><i class='bx bxl-instagram-alt'></i></a></li>
+                                    <li><a [href]="defaultDatas!.twitterUrl" target="_blank"><i class='bx bxl-twitter'></i></a></li>
+                                    <li><a [href]="defaultDatas!.linkedInUrl" target="_blank"><i class='bx bxl-linkedin-square'></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-widget-info ptb-100" *ngIf="defaultDatas">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6 col-md-6">
+                            <div class="footer-widget">
+                                <div class="image">
+                                    <img src="{{imageUrl}}{{defaultDatas!.siteLogoUrl}}" alt="assets/img/logo/logo.png">
+                                     <!-- <h2>Bhoomi Global</h2> -->
+                                </div>
+                                <p>{{defaultDatas!.aboutOffice}}</p>
+                                <div class="info-links">
+                                    <a href="tel:{{defaultDatas!.phoneNumber}}">{{defaultDatas!.phoneNumber}}</a><br/>
+                                    <a href="mailto:{{defaultDatas!.email}}">{{defaultDatas!.email}}</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-md-6" *ngFor="let menuItem of menuItems" >
+                            <div class="footer-widget">
+                                <h4  class="text-center">{{ menuItem.name }}</h4>
+                                <ul>
+                                  <li *ngFor="let childItem of menuItem!.footerMenu">
+                                    <a  (click)="routeMenu(menuItem, childItem)"class='bx bx-chevron-right' style="cursor: pointer;">
+                                      {{ childItem.name }}</a
+                                    >
+                                    <!-- <a
+                                      [routerLink]="
+                                        childItem.codeUrl ? childItem.codeUrl : childItem.url
+                                      "
+                                      >{{ childItem.name }}</a
+                                    > -->
+                                  </li>
+                                </ul>
+                              </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="copy-right-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-xm-6">
+                            <div class="cpr-left">
+                                <p>Copyright© <a href="javascript:void(0)">CodeCraft Tech Solution</a>, All rights reserved.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-xm-6">
+                            <div class="cpr-right">
+                                <ul>
+                                    <li><a routerLink="/termsofservices">Term of servicess</a></li>
+                                    <li><a routerLink="/privacypolicy">Privacy Policy</a></li>
+                                    <!-- <li><a routerLink="/service/cookie-policy">Cookie Policy</a></li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <!-- Start Footer Area -->
+        <!-- <div class="footer-area-3">
+            <div class="container">
+                <div class="footer-top-info ptb-70">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-sm-6 col-12">
+                            <div class="left-content">
+                                <p><i class='bx bx-support'></i> Speak to our expert at <a href="tel:+9779818624020">+977-9818624040.</a></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-12">
+                            <div class="right-content">
+                                <span>Follow Us</span>
+                                <ul>
+                                    <li><a href="javascript:void(0)"><i class='bx bxl-facebook'></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class='bx bxl-instagram-alt'></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class='bx bxl-twitter'></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class='bx bxl-linkedin-square'></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-widget-info ptb-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6 col-md-6">
+                            <div class="footer-widget">
+                                <div class="image">
+                                     <h2>Bhoomi Global</h2>
+                                </div>
+                                <p>Your gateway to 300+ top universities worldwide—Bhoomi makes global education simple and achievable!</p>
+                                <div class="info-links">
+                                    <a href="tel:+9779818624020">+977-9818624040</a><br/>
+                                    <a href="mailto:bhoomiglobaleducation@gmail.com">bhoomiglobaleducation&#64;gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-md-6">
+                            <div class="footer-widget">
+                                <h4>Services</h4>
+                                <ul>
+                                    <li><a routerLink="/service/study-abroad"><i class='bx bx-chevron-right'></i> Study Abroad Counseling</a></li>
+                                    <li><a routerLink="/service/visa-assistance"><i class='bx bx-chevron-right'></i> Visa Assistance</a></li>
+                                    <li><a routerLink="/service/application-guide"><i class='bx bx-chevron-right'></i> Application Guidance</a></li>
+                                    <li><a routerLink="/service/scholarship-info"><i class='bx bx-chevron-right'></i> Scholarship Information</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-md-6">
+                            <div class="footer-widget">
+                                <h4>University Partnerships</h4>
+                                <ul>
+                                    <li><a routerLink="/service/partner-instution"><i class='bx bx-chevron-right'></i> Our Partner Institutions</a></li>
+                                    <li><a routerLink="/service/collabation-opportunities"href="javascript:void(0)"><i class='bx bx-chevron-right'></i> Collaboration Opportunities</a></li>
+                                    <li><a routerLink="/service/international-programs"><i class='bx bx-chevron-right'></i> International Programs</a></li>
+                                    <li><a routerLink="/service/alumini-network"><i class='bx bx-chevron-right'></i> Alumni Network</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-md-6">
+                            <div class="footer-widget">
+                                <h4>Student Support</h4>
+                                <ul>
+                                    <li><a routerLink="/service/career-counselling"><i class='bx bx-chevron-right'></i> Career Counseling</a></li>
+                                    <li><a routerLink="/service/housing-assistance"><i class='bx bx-chevron-right'></i> Housing Assistance</a></li>
+                                    <li><a routerLink="/service/financial-aid"><i class='bx bx-chevron-right'></i> Financial Aid Guidance</a></li>
+                                    <li><a routerLink="/service/health"><i class='bx bx-chevron-right'></i> Health & Wellness</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copy-right-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-xm-6">
+                            <div class="cpr-left">
+                                <p>Copyright© <a href="javascript:void(0)">Bhoomi Global Education Consultancy</a>, All rights reserved.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-xm-6">
+                            <div class="cpr-right">
+                                <ul>
+                                    <li><a routerLink="/service/term-of-services">Term of servicess</a></li>
+                                    <li><a routerLink="/service/privacy-policy">Privacy Policy</a></li>
+                                    <li><a routerLink="/service/cookie-policy">Cookie Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- End Footer Area -->
+
+        <div class="go-top active">
+            <i class="bx bx-up-arrow-alt"></i>
+        </div>

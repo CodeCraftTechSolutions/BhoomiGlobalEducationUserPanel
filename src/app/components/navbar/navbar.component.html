@@ -1,0 +1,38 @@
+<div class="navbar-area" id="navbar">
+  <div class="container-fluid">
+    <nav class="row navbar navbar-expand-lg">
+      <!-- Bhoomi Global Section -->
+      <div class="col-4 d-flex align-items-center" *ngIf="defaultDatas">
+        <a class="navbar-brand" routerLink="/">
+          <img
+            src="{{ imageUrl }}{{ defaultDatas!.siteLogoUrl }}"
+            alt="Logo"
+            class="responsive-logo"
+          />
+        </a>
+      </div>
+
+      <!-- Menu Section -->
+      <div class="col-8 d-flex justify-content-end align-items-center">
+        <div class="other-option d-lg-none me-3">
+          <button type="button" class="search-btn" (click)="toggleSearch()">
+            <i class="bx bx-search"></i>
+          </button>
+        </div>
+        <button
+          class="navbar-toggler me-3"
+          type="button"
+          (click)="toggleMenu()"
+        >
+          <i class="bx bx-menu"></i>
+        </button>
+        <div
+          [ngClass]="{ 'collapse navbar-collapse': true, show: isMenuOpen }"
+          class="d-flex"
+        >
+          <app-menu></app-menu>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>

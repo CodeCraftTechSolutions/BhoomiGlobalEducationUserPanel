@@ -1,0 +1,140 @@
+<div class="navbar-container">
+  <div id="mainnav" class="d-flex justify-content-between align-items-center px-3">
+    <!-- Mobile Toggle Button -->
+    <div class="toggle-nav" (click)="mainMenuToggle()">
+      <i class="fa fa-bars sidebar-bar"></i>
+    </div>
+
+    <!-- Navigation Menu -->
+    <ul class="navbar-nav d-flex flex-row align-items-center ms-auto" [class.opennav]="isMenuVisible">
+      <!-- Close Button for Mobile -->
+      <li *ngIf="isMenuVisible" class="nav-item">
+        <button (click)="mainMenuToggle()" class="close-btn">
+          <i class="fa fa-times"></i> {{ "Close" }}
+        </button>
+      </li>
+
+      <!-- Static Home Link -->
+      <li class="nav-item">
+        <a routerLink="/" class="nav-link px-3">Home</a>
+      </li>
+
+
+      <li class="nav-item">
+        <a routerLink="/about" class="nav-link px-3">About Us</a>
+      </li>
+
+     
+
+      <!-- <li class="nav-item position-relative">
+        <a
+          class="nav-link pointer px-3 d-flex align-items-center"
+          (click)="toggleAcademics()"
+        >
+          Academics
+          <i class="ri-arrow-drop-down-line ms-1"></i>
+        </a>
+      
+        <ul
+          class="dropdown-menu position-absolute"
+          [class.show]="isAcademicsOpen"
+        >
+          <li class="nav-item">
+            <a
+              routerLink="/academics/undergraduate"
+              class="dropdown-item"
+              (click)="isAcademicsOpen = false"
+            >
+              Undergraduate
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              routerLink="/academics/graduate"
+              class="dropdown-item"
+              (click)="isAcademicsOpen = false"
+            >
+              Graduate
+            </a>
+          </li>
+        </ul>
+      </li> -->
+
+      <!-- Dynamic Menu -->
+      <li
+        class="nav-item position-relative"
+        *ngFor="let menuItem of dynamicMenus"
+        (click)="toggleDropdown(menuItem!.name, $event)"
+      >
+        <a class="nav-link pointer px-3 d-flex align-items-center" style="cursor: pointer;">
+          {{ menuItem?.name }} <i class="ri-arrow-drop-down-line ms-1"></i>
+        </a>
+
+        <!-- Dropdown Menu -->
+        <ul
+          class="dropdown-menu position-absolute"
+          [class.show]="activeDropdown === menuItem?.name"
+        >
+          <li
+            *ngFor="let nestedMenu of menuItem?.headerMenu"
+            class="nav-item"
+          >
+            <a
+              (click)="routeMenu(menuItem, nestedMenu)"
+              style="cursor: pointer;"
+              class="dropdown-item"
+            >
+              {{ nestedMenu.name }}
+            </a>
+          </li>
+        </ul>
+      </li>
+
+
+      <li class="nav-item">
+        <a routerLink="/faq" class="nav-link px-3">FAQ</a>
+      </li>
+
+      <!-- Contact Link -->
+      <li class="nav-item">
+        <a routerLink="/contact" class="nav-link px-3">Contact</a>
+      </li>
+
+      <!-- Sign In/Account Section -->
+      <li class="nav-item ms-3">
+        <a *ngIf="!isLoggedIn" [routerLink]="['/signin']" class="nav-link px-3">
+          <i class="fa fa-user me-1"></i> Sign In
+        </a>
+
+        <!-- Logged In Section -->
+        <div *ngIf="isLoggedIn" class="dropdown">
+          <a
+            class="nav-link dropdown-toggle d-flex align-items-center px-3"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <!-- <img
+              height="24"
+              width="24"
+              [src]="userimage || '../../../assets/images/user11.png'"
+              class="rounded-circle me-2"
+            /> -->
+            {{ username }} <i class="ri-arrow-down-wide-fill ms-1"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a routerLink="/dashboard/userdashboard" class="dropdown-item">
+                <i class="fa fa-tachometer me-2"></i> Dashboard
+              </a>
+            </li>
+            <li>
+              <button class="dropdown-item text-danger" (click)="onLogout()">
+                <i class="fa fa-sign-out me-2"></i> Log Out
+              </button>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

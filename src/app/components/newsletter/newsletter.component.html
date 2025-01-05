@@ -1,0 +1,35 @@
+<div class="subscribe-area-3 ptb-100" style="background-color: #120f2d">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-sm-6">
+          <div class="image" data-aos="fade-zoom-in" data-aos-delay="100">
+            <img [src]="sectionOne!.imageUrl != '' ? imageUrl + sectionOne!.imageUrl: 'assets/img/all-img/subscribe.jpg'" alt="icon">
+
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="content">
+            <span>{{sectionOne!.subTitle}}</span>
+            <h2>{{sectionOne!.title}}</h2>
+            <div class="signup">
+              <form [formGroup]="newsLetterForm" (ngSubmit)="onSubmit()">
+                <input
+                  type="email"
+                  class="email-signup"
+                  formControlName="emailAddress"
+                  placeholder="Your Email"
+                  required
+                />
+                <input
+                  type="submit"
+                  value="Subscribe Now"
+                  class="btn"
+                  [disabled]="newsLetterForm.invalid"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

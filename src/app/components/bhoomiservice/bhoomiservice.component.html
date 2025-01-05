@@ -1,0 +1,119 @@
+<div class="service-page-container" >
+    <div class="container mt-5" >
+      <header class="page-header" style="text-align: center; background-color: #f0f7fb; padding: 30px 0;" id="services">
+        <h1 style="font-size: 3rem; color: #2a4d73;">{{sectionOne!.title}}</h1>
+        <p style="font-size: 1.2rem; color: #4a6572; margin-top: 10px;">{{sectionOne!.subTitle}}</p>
+      </header>
+  
+      <section class="intro-section" style="padding: 50px 0;">
+        <p [innerHTML]="sectionOne!.shortDescription"></p>
+        <!-- <h2 style="font-size: 2.5rem;">Why Choose Study Abroad Counseling?</h2>
+        <p style="font-size: 1.2rem; color: #5c6b6d;">Studying abroad is an enriching experience. Our counselors provide expert advice on program selection, university applications, visas, and more.</p>
+        <ul style="font-size: 1.2rem; color: #5c6b6d;">
+          <li>University selection guidance</li>
+          <li>Application process support</li>
+          <li>Visa and immigration assistance</li>
+          <li>Pre-departure orientation</li>
+        </ul> -->
+      </section>
+  
+      <section class="services-section" style="padding: 50px 0;">
+        <h2 style="font-size: 2.5rem;">{{sectionTwo!.pageSectionDetailsList[0]!.title}}</h2>
+        <div class="row mt-4">
+          <div class="col-lg-4">
+            <h3>{{sectionTwo!.pageSectionDetailsList[1]!.title}}</h3>
+            <p>{{sectionTwo!.pageSectionDetailsList[1]!.subTitle}}</p>
+          </div>
+          <div class="col-lg-4">
+            <h3>{{sectionTwo!.pageSectionDetailsList[2]!.title}}</h3>
+            <p>{{sectionTwo!.pageSectionDetailsList[2]!.subTitle}}</p>
+          </div>
+          <div class="col-lg-4">
+            <h3>{{sectionTwo!.pageSectionDetailsList[3]!.title}}</h3>
+            <p>{{sectionTwo!.pageSectionDetailsList[3]!.subTitle}}</p>
+          </div>
+        </div>
+      </section>
+  
+      <section class="cta-section" style="padding: 50px 0; background-color: #00796b; color: white;">
+        <div class="text-center"> 
+          <h2>{{sectionThree!.pageSectionDetailsList[0]!.title}}</h2>
+        <p class="text-white mb-2">{{sectionThree!.pageSectionDetailsList[0]!.subTitle}}</p>
+        </div>
+        <!-- <a routerLink="/contact" style="background-color: #ffb300; padding: 15px 30px; color: #fff;">Get in Touch</a> -->
+      </section>
+    </div>
+  </div>
+ 
+
+  <!-- cookie policy -->
+  <!-- <div class="cookie-policy-container" *ngIf="serviceName == 'cookie-policy'">
+    <div class="container">
+      <header class="page-header" style="text-align: center; background-color: #e3f2fd; padding: 40px 0;">
+        <h1 style="font-size: 3.5rem; color: #01579b;">Cookie Policy</h1>
+        <p style="font-size: 1.2rem; color: #4a6572; margin-top: 10px;">Our website uses cookies to enhance your experience. This Cookie Policy explains what cookies are, how we use them, and how you can manage your cookie settings.</p>
+      </header>
+  
+      <section class="intro-section" style="padding: 50px 0; background-color: #ffffff; border-bottom: 2px solid #ccc;">
+        <h2 style="font-size: 2.5rem; color: #00796b;">What Are Cookies?</h2>
+        <p style="font-size: 1.2rem; color: #5c6b6d;">Cookies are small text files that are stored on your device when you visit a website. They help the website remember your preferences, login information, and other details to enhance your user experience.</p>
+      </section>
+  
+      <section class="types-of-cookies" style="padding: 50px 0;">
+        <h2 style="font-size: 2.5rem; color: #00796b;">Types of Cookies We Use</h2>
+        <p style="font-size: 1.2rem; color: #5c6b6d;">We use the following types of cookies on our website:</p>
+        <ul style="font-size: 1.2rem; color: #5c6b6d;">
+          <li><strong>Essential Cookies:</strong> These cookies are necessary for the functioning of the website. They enable basic functions such as page navigation and access to secure areas of the site.</li>
+          <li><strong>Performance Cookies:</strong> These cookies collect information about how visitors use our website, such as which pages are visited most often. This helps us improve our website's performance.</li>
+          <li><strong>Functional Cookies:</strong> These cookies allow the website to remember choices you make (such as language preferences) to provide a more personalized experience.</li>
+          <li><strong>Advertising Cookies:</strong> These cookies are used to deliver advertisements that are relevant to you and your interests. They help measure the effectiveness of advertising campaigns.</li>
+        </ul>
+      </section>
+  
+      <section class="why-cookies-are-important" style="padding: 50px 0; background-color: #f1f8e9;">
+        <h2 style="font-size: 2.5rem; color: #00796b;">Why Are Cookies Important?</h2>
+        <p style="font-size: 1.2rem; color: #5c6b6d;">Cookies are essential for providing a better browsing experience. They allow us to:</p>
+        <ul style="font-size: 1.2rem; color: #5c6b6d;">
+          <li>Enhance the website's functionality</li>
+          <li>Remember your preferences and settings</li>
+          <li>Analyze user behavior to improve website performance</li>
+          <li>Offer you relevant advertisements based on your interests</li>
+        </ul>
+      </section>
+  
+      <section class="manage-cookies" style="padding: 50px 0;">
+        <h2 style="font-size: 2.5rem; color: #00796b;">How to Manage Cookies</h2>
+        <p style="font-size: 1.2rem; color: #5c6b6d;">You have control over the cookies that are placed on your device. You can manage or disable cookies through your browser settings. Please note that disabling certain cookies may impact the functionality of our website.</p>
+        <p style="font-size: 1.2rem; color: #5c6b6d;">To manage your cookie preferences:</p>
+        <ul style="font-size: 1.2rem; color: #5c6b6d;">
+          <li>Go to your browser settings and look for the “Privacy” or “Cookies” section.</li>
+          <li>Follow the instructions to delete or block cookies.</li>
+          <li>You can choose to block all cookies, or block cookies from specific websites.</li>
+        </ul>
+        <p style="font-size: 1.2rem; color: #5c6b6d;">For more information about cookie management, visit the help section of your browser.</p>
+      </section>
+  
+      <section class="third-party-cookies" style="padding: 50px 0;">
+        <h2 style="font-size: 2.5rem; color: #00796b;">Third-Party Cookies</h2>
+        <p style="font-size: 1.2rem; color: #5c6b6d;">We may allow third-party service providers to place cookies on our website. These third parties include advertising networks and analytics providers. These cookies are used to track user activity across different websites to deliver targeted ads and analyze website traffic.</p>
+        <p style="font-size: 1.2rem; color: #5c6b6d;">For more information about these third-party cookies, please refer to their respective privacy policies.</p>
+      </section>
+  
+      <section class="cookies-consent" style="padding: 50px 0; background-color: #f1f8e9;">
+        <h2 style="font-size: 2.5rem; color: #00796b;">Your Consent</h2>
+        <p style="font-size: 1.2rem; color: #5c6b6d;">By using our website, you consent to the use of cookies in accordance with this Cookie Policy. If you do not agree with our cookie usage, please adjust your browser settings accordingly or refrain from using the site.</p>
+      </section>
+  
+      <section class="contact-info" style="padding: 50px 0; background-color: #00796b; color: white; text-align: center;">
+        <h2 style="font-size: 2.5rem;">Contact Us</h2>
+        <p style="font-size: 1.2rem;" class="text-white mb-2">If you have any questions about this Cookie Policy or our data practices, feel free to reach out to us.</p>
+        <a routerLink="/contact" style="background-color: #ffb300; padding: 15px 30px; color: #fff; font-size: 1.2rem; text-decoration: none; border-radius: 5px;">Contact Us</a>
+      </section>
+  
+      <section class="footer-section" style="padding: 40px 0; text-align: center; background-color: #eeeeee;">
+        <p style="font-size: 1rem; color: #4a6572;">© 2024 Bhoomi Global Education Consultancy. All rights reserved. | Privacy Policy | Terms & Services</p>
+      </section>
+    </div>
+  </div>
+   -->
+  

@@ -1,0 +1,155 @@
+[
+  {
+    "pageCategoryId": 1,
+    "name": "Services",
+    "isParent": true,
+    "url": null,
+    "codeUrl": null,
+    "pageId": 0,
+    "footerMenu": [
+      {
+        "pageCategoryId": 101,
+        "name": "Study Abroad Counseling",
+        "isParent": false,
+        "url": "/service/study-abroad",
+        "codeUrl": null,
+        "pageId": 0,
+        "footerMenu": null,
+        "additionData": null
+      },
+      {
+        "pageCategoryId": 102,
+        "name": "Visa Assistance",
+        "isParent": false,
+        "url": "/service/visa-assistance",
+        "codeUrl": null,
+        "pageId": 0,
+        "footerMenu": null,
+        "additionData": null
+      },
+      {
+        "pageCategoryId": 103,
+        "name": "Application Guidance",
+        "isParent": false,
+        "url": "/service/application-guide",
+        "codeUrl": null,
+        "pageId": 0,
+        "footerMenu": null,
+        "additionData": null
+      },
+      {
+        "pageCategoryId": 104,
+        "name": "Scholarship Information",
+        "isParent": false,
+        "url": "/service/scholarship-info",
+        "codeUrl": null,
+        "pageId": 0,
+        "footerMenu": null,
+        "additionData": null
+      }
+    ],
+    "additionData": null
+  },
+  {
+    "pageCategoryId": 2,
+    "name": "University Partnerships",
+    "isParent": true,
+    "url": null,
+    "codeUrl": null,
+    "pageId": 0,
+    "footerMenu": [
+      {
+        "pageCategoryId": 201,
+        "name": "Our Partner Institutions",
+        "isParent": false,
+        "url": "/service/partner-instution",
+        "codeUrl": null,
+        "pageId": 0,
+        "footerMenu": null,
+        "additionData": null
+      },
+      {
+        "pageCategoryId": 202,
+        "name": "Collaboration Opportunities",
+        "isParent": false,
+        "url": "/service/collabation-opportunities",
+        "codeUrl": null,
+        "pageId": 0,
+        "footerMenu": null,
+        "additionData": null
+      },
+      {
+        "pageCategoryId": 203,
+        "name": "International Programs",
+        "isParent": false,
+        "url": "/service/international-programs",
+        "codeUrl": null,
+        "pageId": 0,
+        "footerMenu": null,
+        "additionData": null
+      },
+      {
+        "pageCategoryId": 204,
+        "name": "Alumni Network",
+        "isParent": false,
+        "url": "/service/alumini-network",
+        "codeUrl": null,
+        "pageId": 0,
+        "footerMenu": null,
+        "additionData": null
+      }
+    ],
+    "additionData": null
+  },
+  {
+    "pageCategoryId": 3,
+    "name": "Student Support",
+    "isParent": true,
+    "url": null,
+    "codeUrl": null,
+    "pageId": 0,
+    "footerMenu": [
+      {
+        "pageCategoryId": 301,
+        "name": "Career Counseling",
+        "isParent": false,
+        "url": "/service/career-counselling",
+        "codeUrl": null,
+        "pageId": 0,
+        "footerMenu": null,
+        "additionData": null
+      },
+      {
+        "pageCategoryId": 302,
+        "name": "Housing Assistance",
+        "isParent": false,
+        "url": "/service/housing-assistance",
+        "codeUrl": null,
+        "pageId": 0,
+        "footerMenu": null,
+        "additionData": null
+      },
+      {
+        "pageCategoryId": 303,
+        "name": "Financial Aid Guidance",
+        "isParent": false,
+        "url": "/service/financial-aid",
+        "codeUrl": null,
+        "pageId": 0,
+        "footerMenu": null,
+        "additionData": null
+      },
+      {
+        "pageCategoryId": 304,
+        "name": "Health & Wellness",
+        "isParent": false,
+        "url": "/service/health",
+        "codeUrl": null,
+        "pageId": 0,
+        "footerMenu": null,
+        "additionData": null
+      }
+    ],
+    "additionData": null
+  }
+]

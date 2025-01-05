@@ -1,0 +1,49 @@
+<!-- section start -->
+<section class="section-b-space">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <!-- Toggle Button for Small Screens -->
+          <button
+            *ngIf="!openInfo"
+            class="toggle-sidebar"
+            (click)="toggleSidebar()">
+            <i class="ri-menu-unfold-3-fill"></i> {{ 'Menu'  }}
+          </button>
+  
+          <div class="dashboard-left" [class.open]="openInfo">
+            <div class="block-content">
+              <ul>
+                <li
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }">
+                  <a [routerLink]="['/dashboard/userdashboard']">{{ 'Dashboard'  }}</a>
+                </li>
+                <li
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }">
+                  <a [routerLink]="['/dashboard/useraccount']">{{ 'My Account'  }}</a>
+                </li>
+                <!-- <li
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }">
+                  <a [routerLink]="['/dashboard/support']">{{ 'Contact Help'  }}</a>
+                </li>
+                <li
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }"
+                  class="last">
+                  <a [routerLink]="['/dashboard/faq']">{{ 'FAQ'  }}</a>
+                </li> -->
+              </ul>
+              <div *ngIf="openInfo" class="close-menu" (click)="closeSidebar()">
+                {{ 'Close'  }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- section end -->
+  

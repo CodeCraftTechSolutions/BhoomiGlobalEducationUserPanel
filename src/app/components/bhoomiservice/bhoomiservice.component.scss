@@ -1,0 +1,15 @@
+ul {
+    list-style-type: none;  /* Removes default bullet points */
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    cursor: normal;  /* Resets the cursor to normal (default) */
+    pointer-events: none;  /* Disables any click or hover events on the list items */
+    user-select: none;  /* Prevents text selection */
+  }
+
+  a{
+    cursor: pointer;
+  }

@@ -1,0 +1,23 @@
+.landing-page {
+    text-align: center;
+    padding: 20px;
+  }
+
+
+  .chat-container {
+    max-width: 500px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  /* .big-bg-2 {
+    padding-top: 5rem !important;
+    padding-bottom: 5.625rem !important;
+  }
+ */
+
+ 
+
